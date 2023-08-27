@@ -8,4 +8,5 @@ int main(void)
     insert_node(&list, 2);
     insert_node(&list, 4);
     insert_node(&list, 10);
+    insert_node(&list, -2);
 }
