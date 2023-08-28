@@ -3,9 +3,10 @@ def safe_print_list(my_list=[], x=0):
     try:
         index = 0
         for item in my_list:
-            print(item, end="")
-            index = index + 1
-            if index == x:
+            if index < x:
+                print(item, end="")
+                index = index + 1
+            else:
                 break
         print("")
         return index
