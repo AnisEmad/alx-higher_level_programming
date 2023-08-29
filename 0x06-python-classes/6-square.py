@@ -3,7 +3,8 @@ class Square:
     """
     A class to represent squares.
 
-    This class defines a square with attributes for size and position. It provides error
+    This class defines a square with attributes for size and position. It
+    provides error
     handling for invalid size and position values.
 
     Attributes:
@@ -13,7 +14,8 @@ class Square:
     Raises:
         TypeError: If the provided size is not an integer.
         ValueError: If the provided size is negative.
-        TypeError: If the provided position is not a tuple of two positive integers.
+        TypeError: If the provided position is not a tuple of two positive
+        integers.
 
     Methods:
         area(): Calculates the area of the square.
@@ -68,7 +70,8 @@ class Square:
             value (tuple): The new position of the square.
 
         Raises:
-            TypeError: If the provided position is not a tuple of two positive integers.
+            TypeError: If the provided position is not a tuple of two positive
+            integers.
         """
         if not isinstance(value, tuple) or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
