@@ -1,13 +1,23 @@
+#!/usr/bin/python3
 class Square:
     """
     A class to represent squares.
 
-    This class defines a square with a size attribute and provides error
-    handling for invalid size values.
+    This class defines a square with attributes for size and position. It provides error
+    handling for invalid size and position values.
 
     Attributes:
         size (int): The size of the square's sides.
         position (tuple): The position of the square.
+
+    Raises:
+        TypeError: If the provided size is not an integer.
+        ValueError: If the provided size is negative.
+        TypeError: If the provided position is not a tuple of two positive integers.
+
+    Methods:
+        area(): Calculates the area of the square.
+        my_print(): Prints the square with character #.
     """
 
     def __init__(self, size=0, position=(0, 0)):
@@ -58,12 +68,11 @@ class Square:
             value (tuple): The new position of the square.
 
         Raises:
-            TypeError: If the provided position is not a tuple of two positive
-            integers.
+            TypeError: If the provided position is not a tuple of two positive integers.
         """
         if not isinstance(value, tuple) or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-        if any(type(i) != int or i < 0 for i in value):
+        if any(not isinstance(i, int) or i < 0 for i in value):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
@@ -78,7 +87,7 @@ class Square:
 
     def my_print(self):
         """
-        Prints the square with character #
+        Prints the square with character #.
         """
         if self.__size == 0:
             print()
