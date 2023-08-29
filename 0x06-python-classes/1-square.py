@@ -3,7 +3,7 @@
 This module defines a simple Square class.
 
 This module provides a basic implementation of a Square class that can be used
-to represent squares in a geometric context. The class has been updated to 
+to represent squares in a geometric context. The class has been updated to
 include
 an attribute for size.
 
