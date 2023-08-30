@@ -1,6 +1,2 @@
 #!/bin/bash
-filename="$PYFILE"
-base_name=$(basename "$filename" .py)
-python -m py_compile "$filename"
-mv "__pycache__/${base_name}.cpython-*.pyc" "${base_name}c.pyc"
-rm -r "__pycache__"
+python -m py_compile $PYFILE
