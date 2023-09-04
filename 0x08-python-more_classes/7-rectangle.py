@@ -57,6 +57,8 @@ class Rectangle:
                 if type(self.print_symbol) == list:
                     string_result = '[' + ', '.join(self.print_symbol) + ']'
                     string += string_result
+                elif type(self.print_symbol) == int or type(self.print_symbol) == float:
+                    string += str(self.print_symbol)
                 else:
                     string += self.print_symbol
             if i != self.__height - 1:
