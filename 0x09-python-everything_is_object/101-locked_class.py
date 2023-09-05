@@ -9,4 +9,4 @@ class LockedClass:
     """
         class locked class
     """
-    __slots__ = ("first_name")   
+    __slots__ = ("first_name")
