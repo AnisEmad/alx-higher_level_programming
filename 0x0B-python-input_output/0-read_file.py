@@ -1,10 +1,8 @@
 #!/usr/bin/python3
-def read_file(filename=""):
-    """
-    read file
-    args:
-        filename(str): filename
-    """
+""" defining read_file function"""
 
+
+def read_file(filename=""):
+    """ reads filename with utf-8 encoding"""
     with open(filename, mode="r", encoding="utf-8") as file:
-        print(file.read())
+        print(file.read(), end="")
