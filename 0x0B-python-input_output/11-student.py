@@ -20,5 +20,6 @@ class Student:
                     if key == str:
                         new[key] = value
             return new
+
     def reload_from_json(self, json):
         self.__dict__ = json
