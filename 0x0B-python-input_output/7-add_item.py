@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 
+"""
 script that adds all arguments a python list
 and save it to a json file
 
@@ -18,7 +18,7 @@ try:
 except FileNotFoundError:
     list = list()
 
-for i in range (1, arg_count):
+for i in range(1, arg_count):
     list.append(sys.argv[i])
 
 save_to_json_file(list, "add_item.json")
