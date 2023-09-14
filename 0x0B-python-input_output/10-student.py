@@ -14,9 +14,9 @@ class Student:
             return self.__dict__
         else:
             data = self.__dict__
-            dict = dict()
+            new = dict()
             for str in attrs:
                 for key, value in data.items():
                     if key == str:
-                        dict[key] = value
-            return dict
+                        new[key] = value
+            return new
