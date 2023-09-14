@@ -4,7 +4,7 @@
 
 def is_same_class(obj, a_class):
     """ is same class function """
-    if isinstance(obj, a_class):
+    if obj.__name__ == a_class:
         return True
     else:
         return False
