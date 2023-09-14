@@ -22,4 +22,5 @@ class Student:
             return new
 
     def reload_from_json(self, json):
-        self.__dict__ = json
+        for key, value in json.items():
+            self.__dict__[key] = value
