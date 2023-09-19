@@ -5,8 +5,6 @@ from models.base import Base
 
 class Rectangle(Base):
     """ class Rectangle """
-
-
     def __init__(self, width, height, x=0, y=0, id=None):
         """ constructor """
         super().__init__(id)
@@ -14,12 +12,12 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-    
+
     @property
     def width(self):
         """ width of the rectangle """
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         if not isinstance(value, int):
@@ -27,12 +25,12 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("width must be > 0")
         self.__width = value
-    
+
     @property
     def height(self):
         """ the height of the rectangle """
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
@@ -58,7 +56,7 @@ class Rectangle(Base):
     def y(self):
         """ y of the rectangle """
         return self.__y
-    
+
     @y.setter
     def y(self, value):
         if not isinstance(value, int):
@@ -77,15 +75,15 @@ class Rectangle(Base):
             print()
         for i in range(self.__height):
             for k in range(self.__x):
-                    print(" ",end="")
+                print(" ", end="")
             for j in range(self.__width):
-                print("#",end="")
+                print("#", end="")
             print()
 
     def __str__(self):
         """ returns the representation of the rectangle"""
-        str = "[Rectangle] ({}) {}/{} - {}".format(self.id, self.__x, self.__y, self.__width)
-        str += "/{}".format(self.__height)
+        str = "[Rectangle] ({}) {}/{} - {}/{}"\
+            .format(self.id, self.__x, self.__y, self.__width, self.__height)
         return str
 
     def update(self, *args, **kwargs):
