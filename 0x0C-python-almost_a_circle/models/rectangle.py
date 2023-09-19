@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """ defining a rectangle class """
-
-
 from base import Base
 
 
@@ -63,9 +61,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """ calculates the area of the rectangle """
         return self.__height * self.__width
 
     def display(self):
+        """ display the rectangle """
         for i in range(self.__y):
             print()
         for i in range(self.__height):
@@ -81,6 +81,7 @@ class Rectangle(Base):
         return str
 
     def update(self, *args, **kwargs):
+        """ update the recatngle"""
         n = len(args)
         if n == 0:
             for key, item in kwargs.items():
