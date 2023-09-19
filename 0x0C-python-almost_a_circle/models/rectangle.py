@@ -6,6 +6,7 @@ from base import Base
 class Rectangle(Base):
     """ class Rectangle """
     def __init__(self, width, height, x=0, y=0, id=None):
+        """ constructor """
         super().__init__(id)
         self.width = width
         self.height = height
@@ -14,6 +15,7 @@ class Rectangle(Base):
     
     @property
     def width(self):
+        """ width of the rectangle """
         return self.__width
     
     @width.setter
@@ -26,6 +28,7 @@ class Rectangle(Base):
     
     @property
     def height(self):
+        """ the height of the rectangle """
         return self.__height
     
     @height.setter
@@ -38,6 +41,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """ x of the rectangel """
         return self.__x
 
     @x.setter
@@ -50,6 +54,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """ y of the rectangle """
         return self.__y
     
     @y.setter
