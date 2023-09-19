@@ -7,10 +7,12 @@ class Square(Rectangle):
     """ class square """
 
     def __init__(self, size, x=0, y=0, id=None):
+        """ constructor """
         super().__init__(size, size, x, y, id)
     
     @property
     def size(self):
+        """ size of the square """
         return self.width
     
     @size.setter
@@ -19,10 +21,12 @@ class Square(Rectangle):
         self.height = value
 
     def __str__(self):
+        """ returns string representation of the square """
         str = f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
         return str
 
     def update(self, *args, **kwargs):
+        """ upadte the sqaure """
         if args:
             n = len(args)
             if n > 0:
