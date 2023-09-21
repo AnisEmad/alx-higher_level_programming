@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ defining a rectangle class """
 from models.base import Base
-
+import json
 
 class Rectangle(Base):
     """ class Rectangle """
@@ -112,3 +112,6 @@ class Rectangle(Base):
                 self.__x = args[3]
             if n > 4:
                 self.__y = args[4]
+
+    def to_dictionary(self):
+        return json.loads(self)
