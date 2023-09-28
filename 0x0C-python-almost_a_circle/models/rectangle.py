@@ -112,6 +112,3 @@ class Rectangle(Base):
                 self.__x = args[3]
             if n > 4:
                 self.__y = args[4]
-
-    def to_dictionary(self):
-        return json.loads(self)
