@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ this is add_integer module """
 
+
 def add_integer(a, b=98):
     """ this function add two numbers and return it's sum """
     if not isinstance(a, int) and not isinstance(a, float):
