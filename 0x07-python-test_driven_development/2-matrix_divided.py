@@ -18,4 +18,12 @@ def matrix_divided(matrix, div):
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
-    
+    new_matrix = list()
+    c = 0
+    for i in matrix:
+        new_list = list()
+        for j in i:
+            new_list.append(round(j/div, 2))
+        new_matrix.append(new_list)
+        del new_list
+    return new_matrix
