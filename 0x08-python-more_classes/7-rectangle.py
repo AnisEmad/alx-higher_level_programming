@@ -5,7 +5,7 @@
 class Rectangle:
     """ A class for a rectangle """
     number_of_instances = 0
-    print_symbol = "#"
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         Rectangle.number_of_instances += 1
@@ -51,7 +51,10 @@ class Rectangle:
             return string
         for i in range(self.__height):
             for j in range(self.__width):
-                string += Rectangle.print_symbol
+                try:
+                    string += str(self.print_symbol)
+                except Exception:
+                    string += type(self).print_symbol
             if i < self.__height - 1:
                 string += '\n'
         return string
