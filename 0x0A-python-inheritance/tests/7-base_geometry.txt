@@ -48,3 +48,7 @@ TypeError: lol must be an integer
 Traceback (most recent call last):
 ...
 TypeError: lol must be an integer
+>>> bg.integer_validator("lol", {1, 2, 3})
+Traceback (most recent call last):
+...
+TypeError: lol must be an integer
