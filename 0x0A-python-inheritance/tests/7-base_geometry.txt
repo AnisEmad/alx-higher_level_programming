@@ -40,3 +40,11 @@ TypeError: my_int must be an integer
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 [ValueError] distance must be greater than 0
+>>> bg.integer_validator("lol", [1, 2])
+Traceback (most recent call last):
+...
+TypeError: lol must be an integer
+>>> bg.integer_validator("lol", (1, 2))
+Traceback (most recent call last):
+...
+TypeError: lol must be an integer
