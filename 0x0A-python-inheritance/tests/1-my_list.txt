@@ -9,6 +9,8 @@ importing the class
 using it:
 >>> my_list = MyList()
 
+>>> print(my_list)
+
 >>> my_list.append(1)
 
 >>> my_list.append(4)
