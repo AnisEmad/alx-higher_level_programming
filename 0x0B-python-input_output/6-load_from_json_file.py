@@ -8,4 +8,4 @@ import json
 def load_from_json_file(filename):
     """ this function loads object form json file """
     with open(filename, 'r') as file:
-        return json.load(filename)
+        return json.loads(filename)
