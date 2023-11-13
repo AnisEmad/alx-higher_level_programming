@@ -33,12 +33,12 @@ class Base:
         """ this saves a list of objs to a file """
         if list_objs is None:
             data = []
-        
+
         filename = f"{cls.__name__}.json"
         list_dictionaries = [obj.to_dictionary() for obj in list_objs]
 
         data = cls.to_json_string(list_dictionaries)
-        
+
         with open(filename, 'w') as file:
             file.write(data)
 
@@ -54,7 +54,7 @@ class Base:
         """ this function creates an instance with attriubtes """
         dummy = cls(1, 1)
         dummy.update(**dictionary)
-        return dummy    
+        return dummy
 
     @classmethod
     def load_from_file(cls):
