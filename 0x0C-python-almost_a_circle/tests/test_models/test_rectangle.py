@@ -136,3 +136,6 @@ class Test_Rectangle(unittest.TestCase):
         r1.display()
 
         mock_print.assert_called_with("##\n##\n##\n")
+
+if __name__ == "__main__":
+    unittest.main()
