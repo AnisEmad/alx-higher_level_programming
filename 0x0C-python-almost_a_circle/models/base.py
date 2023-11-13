@@ -51,7 +51,7 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """ this function creates an instance with attriubtes """
-        dummy = cls(1)
+        dummy = cls(1, 1)
         dummy.update(**dictionary)
         return dummy
 
